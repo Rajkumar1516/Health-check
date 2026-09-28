@@ -1,0 +1,3 @@
+ # SIT_group.yaml
+ansible_user: ansible
+package_name: "git"

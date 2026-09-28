@@ -1,0 +1,14 @@
+---
+- hosts: sit
+  become: true
+  vars_files:
+    - inventory/group_vars/sit_group.yaml
+  tasks:
+    - name: Install the required version control package
+      ansible.builtin.package:
+        name: "{{ package_name }}"
+        state: present
+
+    - name: Print Success Message
+      ansible.builtin.debug:
+        msg: "SUCCESS: Git version control package has been deployed successfully to the SIT server!"

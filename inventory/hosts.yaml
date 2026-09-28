@@ -1,0 +1,14 @@
+---
+all:
+  children:
+# this is group name
+    dev:
+      hosts:
+# nickname for server
+        dev-server:
+          ansible_host: 172.31.13.73
+    sit:
+      hosts:
+# nickname for server 
+        sit-server:
+          ansible_host: 172.31.7.136
